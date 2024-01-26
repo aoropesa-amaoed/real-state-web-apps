@@ -3,7 +3,7 @@ import { createListing,
         deleteListing, 
         updateListing, 
         getListing, 
-        // getListings 
+        getListings 
     } from '../controller/listingController.js';
 import { verifyToken } from '../utils/verifyUser.js';
 
@@ -13,6 +13,6 @@ router.post('/create', verifyToken, createListing);
 router.delete('/delete/:id', verifyToken, deleteListing);
 router.post('/update/:id', verifyToken, updateListing);
 router.get('/get/:id', getListing);
-// router.get('/get', getListings);
+router.get('/get', getListings);
 
 export default router;
